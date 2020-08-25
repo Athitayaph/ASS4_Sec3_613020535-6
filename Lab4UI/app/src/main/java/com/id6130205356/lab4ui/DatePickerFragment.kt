@@ -8,10 +8,9 @@ import android.widget.DatePicker
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
-import java.text.DateFormat
 import java.util.*
 
-class DatePickerFragment: DialogFragment(), DatePickerDialog.OnDateSetListener {
+class DatePickerFragment : DialogFragment(), DatePickerDialog.OnDateSetListener {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val calendar = Calendar.getInstance()
 
@@ -24,7 +23,7 @@ class DatePickerFragment: DialogFragment(), DatePickerDialog.OnDateSetListener {
 
     override fun onDateSet(view: DatePicker?, year: Int, mouth: Int, day: Int) {
         var tv: TextView? = activity?.findViewById<TextView>(R.id.text_date_select)
-        tv!!.text = formatDate(year,mouth,day)
+        tv!!.text = formatDate(year, mouth, day)
     }
 
     override fun onCancel(dialog: DialogInterface) {
@@ -33,6 +32,6 @@ class DatePickerFragment: DialogFragment(), DatePickerDialog.OnDateSetListener {
     }
 
     private fun formatDate(year: Int, mouth: Int, day: Int): String {
-        return "$mouth/$day/$year"
+        return "${mouth + 1}/$day/$year"
     }
 }

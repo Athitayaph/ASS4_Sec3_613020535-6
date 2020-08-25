@@ -119,33 +119,33 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
             android:onClick="showDetail"
             android:text="Register"
-            android:layout_alignParentLeft="true"
             android:textSize="15sp" />
 
         <Button
             android:id="@+id/btn_reset"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:onClick="reset"
             android:layout_alignParentRight="true"
+            android:onClick="reset"
             android:text="Reset"
             android:textSize="15sp" />
     </RelativeLayout>
 
     <TextView
         android:id="@+id/text_show"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Show detail"
         android:textSize="20sp" />
 
